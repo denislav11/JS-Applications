@@ -1,0 +1,19 @@
+{{> header}}
+<div class="content">
+    {{#if isAuthenticated}}
+        {{> menu}}
+        <section id="viewWelcome">
+            <div class="welcome">
+                {{> about}}
+            </div>
+        </section>
+    {{else}}
+    <section id="viewWelcome">
+        <div class="welcome">
+            {{> homeForms}}
+            {{> about}}
+        </div>
+    </section>
+    {{/if}}
+</div>
+{{> footer}}
